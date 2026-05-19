@@ -13,14 +13,12 @@ API REST completa para la plataforma de comercio electrónico UrbanWear, una tie
 - [Arquitectura del sistema](#arquitectura-del-sistema)
 - [Requisitos previos](#requisitos-previos)
 - [Instalación y configuración local](#instalación-y-configuración-local)
-- [Variables de entorno](#variables-de-entorno)
 - [Esquema de base de datos](#esquema-de-base-de-datos)
 - [Módulos y funcionalidades](#módulos-y-funcionalidades)
 - [Referencia de endpoints](#referencia-de-endpoints)
 - [Autenticación y autorización](#autenticación-y-autorización)
 - [Validación de datos](#validación-de-datos)
 - [Documentación Swagger](#documentación-swagger)
-- [Despliegue en producción](#despliegue-en-producción)
 - [Docker](#docker)
 - [Estructura de archivos](#estructura-de-archivos)
 - [Autor](#autor)
@@ -159,24 +157,6 @@ AuthController  ProductosCtrl  PedidosCtrl
 - npm v9 o superior
 - Docker Desktop instalado y en ejecución
 - NestJS CLI: `npm install -g @nestjs/cli`
-
----
-
-## Variables de entorno
-
-Crear un archivo `.env` en la raíz del proyecto:
-
-```env
-DATABASE_URL="mysql://urbanwear_user:urbanwear_pass@localhost:3306/urbanwear"
-JWT_SECRET="tu-clave-secreta-fuerte-cambiar-en-produccion"
-```
-
-| Variable | Descripción | Obligatoria |
-|---|---|---|
-| `DATABASE_URL` | Cadena de conexión MySQL en formato Prisma | Sí |
-| `JWT_SECRET` | Clave secreta para firmar y verificar tokens JWT | Sí |
-
-El archivo `.env` está en `.gitignore` y nunca debe subirse al repositorio. En producción, estas variables se establecen directamente en el entorno del servidor o mediante la configuración del ecosistema PM2.
 
 ---
 
